@@ -59,7 +59,7 @@ class AddCard extends StatelessWidget {
                                     label: e,
                                     selected: homeCtrl.chipIndex.value == index,
                                     onSelected: (bool selected) {
-                                      homeCtrl.chipIndex.value == selected
+                                      homeCtrl.chipIndex.value = selected
                                           ? index
                                           : 0;
                                     },
@@ -67,7 +67,8 @@ class AddCard extends StatelessWidget {
                                 },
                               ),
                             )
-                            .toList()),
+                            .toList()
+                            ),
                   ),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
