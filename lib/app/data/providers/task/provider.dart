@@ -8,7 +8,7 @@ import 'package:task_todo_app/app/data/services/storage/services.dart';
 class TaskProvier {
   final _storage = Get.find<StorageService>();
 
-  List<Task> readTask() {
+  List<Task> readTasks() {
     var tasks = <Task>[];
     jsonDecode(_storage.read(taskKey).toString())
         .forEach((e) => tasks.add(Task.fromJson(e)));
