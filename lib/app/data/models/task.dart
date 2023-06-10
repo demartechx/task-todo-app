@@ -1,5 +1,4 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
 
 class Task extends Equatable{
   final String title;
@@ -40,6 +39,5 @@ class Task extends Equatable{
       };
 
   @override
-  // TODO: implement props
   List<Object?> get props => [title, icon, color];
 }
