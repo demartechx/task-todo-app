@@ -6,6 +6,7 @@ import 'package:task_todo_app/app/core/values/colors.dart';
 import 'package:task_todo_app/app/data/models/task.dart';
 import 'package:task_todo_app/app/modules/home/controller.dart';
 import 'package:task_todo_app/app/modules/home/widgets/add_card.dart';
+import 'package:task_todo_app/app/modules/home/widgets/add_dialog.dart';
 import 'package:task_todo_app/app/modules/home/widgets/task_card.dart';
 
 class HomePage extends GetView<HomeController> {
@@ -66,7 +67,7 @@ class HomePage extends GetView<HomeController> {
           return Obx(
             () => FloatingActionButton(
               backgroundColor: controller.deleting.value ? Colors.red : blue,
-              onPressed: () {},
+              onPressed: () => Get.to(() => AddDialog(), transition: Transition.downToUp),
               child: Icon(
                 controller.deleting.value ? Icons.delete : Icons.add,
                 color: Colors.white,
